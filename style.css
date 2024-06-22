@@ -1,0 +1,465 @@
+/* Basic CSS Reset */
+body {
+    font-family: Arial, sans-serif;
+}
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+nav {
+    height: 5%; 
+    background-color: #F4ED5E;
+    padding: 1% 2%; 
+    display: flex;
+    justify-content: center; 
+    position: fixed; /* Make the navbar fixed */
+    top: 0; /* Align the navbar to the top of the page */
+    width: 100%; /* Make the navbar span the entire width of the viewport */
+    border-bottom: 1px solid black;
+    z-index: 1000;
+}
+
+ul {
+    list-style-type: none;
+    display: flex; /* Added for better alignment */
+    justify-content: center; /* Center the list items */
+    width: 100%; /* Make the ul span the entire width of the navbar */
+}
+
+li {
+    display: inline;
+    margin-right:3%; 
+}
+
+
+li a {
+    text-decoration: none;
+    color: #0f0f0f;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2.4vw; 
+
+    border-radius: 5px; /* Add some rounded corners to the links */
+    transition: background-color 0.3s;
+}
+
+li a:hover {
+    background-color: #0afafa; /* Background color for the links on hover */
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        height: 12%; /* Adjusted height for smaller screens */
+        padding: 2%; /* Adjusted padding for smaller screens */
+    }
+    li {
+        margin-right: 4%; /* Adjusted margin for smaller screens */
+    }
+    li a {
+        font-size: 4vw; /* Adjusted font size for smaller screens */
+        padding: 2% 1%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        height: 15%; /* Adjusted height for very small screens */
+        padding: 3%; /* Adjusted padding for very small screens */
+    }
+    li {
+        margin-right: 3%; /* Adjusted margin for very small screens */
+    }
+    li a {
+        font-size: 5vw; /* Adjusted font size for very small screens */
+    }
+}
+img {
+    max-width: 100%; /* Ensure the image does not exceed its container's width */
+    height: fit-content; /* Maintain the aspect ratio of the image */
+    display: block; /* Remove any extra space below the image */
+    margin: 0 auto; /* Center the image horizontally */
+}
+/* Responsive CSS for Section 0 */
+#section0 {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Make the section take the full height of the viewport */
+    overflow: hidden; /* Ensure no overflow occurs */
+}
+
+.header-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+#bgimg {
+    width: 100%;
+    height: 100%; /* Ensure the image takes the full height of the section */
+    object-fit: cover; /* Ensure the image covers the section without distortion */
+    display: block; /* Remove any extra space below the image */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+#prt, #name {
+    position: absolute; /* Position absolutely within the header content */
+    transform: translate(-50%, -50%); /* Center the elements */
+    text-align: center; /* Center-align text */
+    font-family: Arial, sans-serif; /* Specify font */
+}
+
+#prt {
+    color: rgb(5, 5, 5);
+    top: 14%;
+    left: 24%;
+    font-size: 5vw; /* Adjusted font size for responsiveness */
+    text-align: left;
+}
+
+#name {
+    color: rgb(5, 5, 5);
+    top: 39%;
+    left: 32%;
+    font-size: 8vw; /* Adjusted font size for responsiveness */
+    border: 2px solid black;
+}
+
+/* Media Queries for better responsiveness */
+@media (max-width: 768px) {
+    #prt {
+        font-size:9vw; /* Adjusted font size for smaller screens */
+        top: 14%;
+        left: 24%;
+    }
+    #name {
+        font-size: 10vw; /* Adjusted font size for smaller screens */
+        top: 39%;
+        left: 32%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    #prt {
+        font-size: 88px; /* Adjusted font size for very small screens */
+        top: 14%;
+        left: 24%;
+    }
+    #name {
+        font-size: 22vw; /* Adjusted font size for very small screens */
+        top: 39%;
+        left: 32%;
+    }
+   
+}
+
+#section1 {
+    padding: 5%; /* Adjust padding using percentage */
+    display: flex;
+    flex-direction: column; /* Change flex direction to column for smaller screens */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+}
+
+#text {
+    font-size: 4vw; /* Adjust font size using viewport width */
+    font-family: monospace;
+    margin: 5% 0; /* Adjust margin using percentage */
+    text-align: center; /* Center text */
+    order: 2; /* Change the order of the text block */
+}
+
+#aboutimage {
+    width: 80%; /* Set the width to 80% of the parent div */
+    margin-bottom: 5%; /* Add margin bottom using percentage */
+    order: 1; /* Change the order of the image */
+}
+
+#abtimg {
+    width: 100%; /* Make sure the image fills the entire width of its container */
+}
+
+/* Media Queries for better responsiveness */
+@media (min-width: 768px) {
+    #section1 {
+        flex-direction: row; /* Change flex direction back to row for larger screens */
+        align-items: center; /* Align items vertically */
+        justify-content: space-between; /* Add space between items */
+    }
+
+    #text {
+        font-size: 1.5vw; /* Adjust font size for larger screens */
+        width: 50%; /* Set width to 50% for larger screens */
+        text-align: left; /* Align text to the left */
+        margin: 0; /* Remove margin */
+        order: 1; /* Change the order of the text block */
+    }
+
+    #aboutimage {
+        width: 40%; /* Set width to 40% for larger screens */
+        margin: 0; /* Remove margin */
+        order: 2; /* Change the order of the image */
+    }
+}
+/* Responsive CSS for Section 2 */
+#section2 {
+    display: flex;
+    flex-direction: column;
+    font-size: 1vw; /* Adjust font size using viewport width */
+   
+}
+
+#myskills {
+    font-size: 6vw; /* Adjust font size using viewport width */
+    font-family: cursive;
+    color: orangered;
+    font-weight: bold;
+     text-align: center; /* Center-align text */
+ 
+}
+
+#skilldetails {
+    font-size: 3vw; /* Adjust font size using viewport width */
+    padding: 0 10%; /* Adjust padding using percentage */
+    font-family: monospace;
+    color: black;
+    overflow: hidden; /* Hide any overflow text */
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap; /* Allow skills to wrap to next line on smaller screens */
+    justify-content: center; /* Center skills horizontally */
+}
+
+.skill {
+    text-align: center;
+    margin: 5%; /* Adjust margin using percentage */
+}
+
+.skill img {
+    width: 20vw; /* Adjust the width of the skill images using viewport width */
+    height: auto;
+    margin-bottom: 1vw; /* Adjust margin bottom using viewport width */
+}
+
+.skill span {
+    display: block;
+    margin-top: 1vw; /* Adjust margin top using viewport width */
+    font-size: 2vw; /* Adjust font size using viewport width */
+    font-weight: bold;
+}
+
+.skill:hover {
+    transform: scale(1.2); /* Adjust hover scale */
+}
+
+/* Media Query for laptops */
+@media (min-width: 1024px) {
+    #myskills {
+        font-size: 6.5vw; /* Adjust font size for laptops */
+    }
+
+    #skilldetails {
+        font-size: 1.5vw; /* Adjust font size for laptops */
+    }
+
+    .skill img {
+        width: 150px; /* Adjust image width for laptops */
+        margin-bottom: 10px; /* Adjust margin bottom for laptops */
+    }
+
+    .skill span {
+        margin-top: 10px; /* Adjust margin top for laptops */
+        font-size: 40px; /* Adjust font size for laptops */
+    }
+}
+
+/* For screens larger than 768px (laptops) */
+@media only screen and (min-width: 768px) {
+    .card-container {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    }
+
+    .card {
+      
+        width: 70vw; /* Adjusted to be 30% of the viewport width */
+        max-width: 600px;
+        border: 3px solid black;
+        border-radius: 20px;
+        margin-right: 20px; /* Adjusted margin for better spacing */
+        background-color: #F4ED5E;
+        scroll-snap-align: center;
+    }
+
+    .card img {
+
+        width: 90vw;
+        height: auto;
+        display: block;
+        border-radius: 20px 20px 0 0; /* Rounded corners only on the top */
+    }
+
+    .project-info {
+        padding: 20px;
+    }
+
+    .project-name,
+    .project-detail {
+        padding: 15px;
+        border: 2px solid black; /* Add border around project name and details */
+        border-radius: 15px; /* Add border-radius to make borders rounded */
+    }
+
+    .project-name p {
+        font-size: 28px; /* Increase font size for project name */
+        font-weight: bold;
+        color: orangered;
+        font-family: cursive;
+        font-stretch: expanded;
+    }
+
+    .project-detail p {
+        font-size: 20px; /* Increase font size for project details */
+        font-family: cursive;
+        font-stretch: expanded;
+    }
+
+    .card:hover {
+        transition: transform 0.5s;
+        transform: scale(1.1);
+    }
+}
+
+/* For screens smaller than 768px (mobile devices) */
+@media only screen and (max-width: 767px) {
+    .card {
+        width: 90vw; /* Adjusted to be 90% of the viewport width */
+        margin-right: 0; /* No right margin for better spacing on mobile */
+        margin-bottom: 20px; /* Add bottom margin for better spacing on mobile */
+    }
+
+    .card img {
+        border-radius: 20px; /* Apply rounded corners to the entire image on mobile */
+    }
+
+    .project-name p {
+        font-size: 24px; /* Reduce font size for project name on mobile */
+    }
+
+    .project-detail p {
+        font-size: 18px; /* Reduce font size for project details on mobile */
+    }
+}
+
+
+#section4 {
+    margin-top: 100px;
+    margin-bottom: 20px;
+
+
+    height: 1300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-image: url('2ec35d04d12c81211e494c3f0c74c7df.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#contactclass
+{
+
+margin-left: 100px;
+height: 900px;
+width: 900px;
+background-color: aqua;
+z-index: 3;
+border: solid 2px black;
+border-radius: 20px;
+background-color: rgba(78, 74, 74, 0.5);
+
+box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); 
+display:flex;
+flex-direction: column;
+align-items: flex-start;
+}
+
+#contactitems
+{
+    margin-left: 100px;
+    
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+#contactitems h1 { 
+    font-size: 100px;
+    font-family:cursive;
+    font-weight:bolder;
+    color: aliceblue;
+}
+#contactitems p { 
+    font-size: 45px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:bolder;
+    color: aliceblue;
+}
+#contactitems 
+{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+#contactitems li a {
+   
+    margin-top: 50px;
+    font-size: 30px; 
+    padding: 15px 8px; /* Add padding to the links */
+    border-radius: 5px; /* Add some rounded corners to the links */
+    transition: background-color 0.3s; 
+    
+}
+
+#contactitems {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #items {
+    margin-bottom: 10px;
+  }
+  
+  #items a {
+    text-decoration: none;
+    color: #333; /* Change this to your desired text color */
+    display: flex;
+    align-items: center;
+    font-size: xx-large;
+  }
+  
+  #items a img {
+    width: 80px; /* Adjust the width of the icons */
+    height: auto;
+    margin-right: 10px; /* Adjust the spacing between the icon and text */
+  }
+  
+  #items a:hover {
+    color: #f3ebeb; /* Change this to your desired color on hover */
+  }
+  
+  #items a:hover img {
+    filter: brightness(80%); /* Adjust the brightness of the icon on hover */
+  }
+  
+
